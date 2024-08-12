@@ -18,7 +18,7 @@ public class BEncryption
 	}
 	
 	public static BPARS bEncryption(BPARS bPars)
-    {
+	{
 		Element C = bPars.get_G1().newRandomElement().duplicate();
 		//Element C[][] = new Element[bPars.get_n()][5];
 		
@@ -55,5 +55,5 @@ public class BEncryption
 		bPars.set_T(T);
 		
 		return bPars;
-    }
+	}
 }

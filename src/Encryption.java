@@ -18,7 +18,7 @@ public class Encryption
 	}
 	
 	public static PARS encryption(PARS pars)
-    {
+	{
 		Element C[] = new Element[5], C_pi[] = new Element[5], a[] = new Element[pars.get_n()];
 		
 		/* four random numbers */
@@ -80,5 +80,5 @@ public class Encryption
 		pars.set_Trapdoor(T);
 		
 		return pars;
-    }
+	}
 }

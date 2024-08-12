@@ -1,5 +1,4 @@
 import java.math.BigInteger;
-
 import entity.BPARS;
 import it.unisa.dia.gas.jpbc.Element;
 
@@ -12,22 +11,22 @@ import it.unisa.dia.gas.jpbc.Element;
 public class BQuery
 {
 	public static boolean bQuery(BPARS bPars)
-    {
+	{
 		Element mySum = bPars.get_G1().newElement();
 		for (int i = 0; i < bPars.get_m(); ++i)
 		{
 			mySum.setToZero();
 			/* Element V_i_pi = BPARS.H2(
-					BPARS.e(bPars.get_T()[i][0], bPars.get_C()[i][0]).mul(
-							BPARS.e(bPars.get_T()[i][1], bPars.get_C()[i][1]).mul(
-									BPARS.e(bPars.get_T()[i][2], bPars.get_C()[i][2]).mul(
-											BPARS.e(bPars.get_T()[i][3], bPars.get_C()[i][3]).mul(
-													BPARS.e(bPars.get_T()[i][4], bPars.get_C()[i][4])
-													)
-											)
-									)
-							), 
-					bPars); */
+				BPARS.e(bPars.get_T()[i][0], bPars.get_C()[i][0]).mul(
+					BPARS.e(bPars.get_T()[i][1], bPars.get_C()[i][1]).mul(
+						BPARS.e(bPars.get_T()[i][2], bPars.get_C()[i][2]).mul(
+							BPARS.e(bPars.get_T()[i][3], bPars.get_C()[i][3]).mul(
+								BPARS.e(bPars.get_T()[i][4], bPars.get_C()[i][4])
+							)
+						)
+					)
+				), bPars
+			); */
 			
 			Element V_i_pi = BPARS.H2(BPARS.e(bPars.get_T()[i], bPars.get_C()), bPars);
 			
@@ -48,6 +47,6 @@ public class BQuery
 				return true;
 			}
 		}
-        return true;
-    }
+		return true;
+	}
 }
